@@ -1,0 +1,15 @@
+#scribbler{
+    font-family: 'Montez', cursive;
+    font-weight:lighter;
+    font-size: xx-large;
+    color:blue;
+    float:left;
+}
+#subheading{
+    font-family: 'Ubuntu Mono', monospace;
+    float:left;
+    font-size: small;
+}
+#signposition{
+    float: right;
+}
