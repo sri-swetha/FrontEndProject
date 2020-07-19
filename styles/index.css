@@ -7,21 +7,11 @@ body {
     margin:0;
     height:100%;
    }
-html{
-    height:100%;
-}
+
 #postpositiondiv{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.container-fluid{
-    height: 100%;
-    overflow: hidden;
 
-}
-.flex-container{
-    height: 100%;
-    overflow: hidden;
-}
