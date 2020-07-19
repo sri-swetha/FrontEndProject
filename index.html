@@ -45,8 +45,8 @@
         </div>
         <div class="row" id="postpositiondiv">
             <span id="postpositionspan">
-                <input class="btn btn-warning btn-sm" type="button" value="All Posts">
-                <input class="btn btn-warning btn-sm" type="button" value="Create Post">
+                <input class="btn btn-warning btn-sm" type="button" value="All Posts" onclick="pageRedirect()">
+                <input class="btn btn-warning btn-sm" type="button" value="Create Post" data-toggle="modal" data-target="#createModal">
             </span>
         </div>
         
@@ -119,6 +119,37 @@
             
             </div>
         </div>
+
+               <!-- Create Post Modal -->
+               <div class="modal" id="createModal"
+               role="dialog" aria-labelledby="myModalLabel"
+               aria-hidden="true">
+                   <div class="modal-dialog">
+                   
+                   <!-- Create Modal content-->
+                   <div class="modal-content" id="createmodelcontent">
+                       <div class="modal-header">
+                           <button class="close" data-dismiss="modal"> 
+                               × 
+                           </button>
+                       <h4 class="modal-title">Pen your Post</h4>
+                       </div>
+                       <div class="modal-body">
+                           <form>
+                               <label for="Title" class="label-text">Title</label>
+                               <input type="text" id="Title" placeholder="Enter title of your post" required>                       
+                               <label for="content" class="label-text">Contents</label>
+                               <textarea rows="10" cols="100">Enter the contents of your post</textarea>    
+                               <div class="text-center">                                          
+                               <button class="btn btn-success btn-sm" type="button" value="Create" id="create" >Create</button>
+                            </div>   
+                           </form>
+       
+                       </div>
+                   </div>
+                   
+                   </div>
+               </div>
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -26,6 +26,11 @@ form {
     cursor: pointer;
 }
 
+#create{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
 #signin{
     margin: 5px 0 22px 0;
     padding: 10px;
@@ -33,7 +38,7 @@ form {
 }
 
   /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password],textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0 22px 0;
@@ -51,3 +56,10 @@ input[type=text], input[type=password] {
       text-align: center;
       font-weight: bolder;
   }
+  textarea {
+    resize: vertical;
+    font-weight: normal;
+}
+#createmodelcontent{
+    width: 100%; 
+}
