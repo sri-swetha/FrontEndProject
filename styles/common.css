@@ -1,3 +1,4 @@
+/*Scribbler and Sign In and Sign Up Positions*/
 #scribbler{
     font-family: 'Montez', cursive;
     font-weight:lighter;
@@ -13,3 +14,40 @@
 #signposition{
     float: right;
 }
+
+/*Sign Up and sign in modals*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#signin{
+    margin: 5px 0 22px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+  /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+ /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 70%; /* Could be more or less, depending on screen size */
+  }
+  #signupspan{
+      text-align: center;
+      font-weight: bolder;
+  }
