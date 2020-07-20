@@ -1,5 +1,5 @@
-function getPost(card) {
-    //window.location.href = "../html/post.html";
+//function invoked from postslist.html
+function getPost(card) {   
     var textArray = document.getElementById(card).innerText;
     textArray = textArray.split("\n").filter(item => item);
     console.log(textArray);
@@ -11,11 +11,10 @@ function getPost(card) {
 }
 var likeCount;
 var editCount;
+//to get title and other details
 function getTitle() {
     likeCount = 0;
     editCount = 0;
-    console.log(localStorage);
-
     var title = '<div class="text-center" id="titlediv" > <p id="title">' + localStorage.getItem("Title") + '</p> </div>';
     title += '<div class="text-left" id="editdiv"> <p id="cardname">' + localStorage.getItem("Name") + '</p> <span  id="editicon"> <button class="btn btn-danger btn-md" type="submit" value="Edit" id="edit" onclick="editborder()" >' + "Edit " + '<i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></span> </div>';
     title += '<div class="text-justify" id="bodydiv"> ' + localStorage.getItem("Body") + '</div>';
@@ -33,6 +32,7 @@ function getTitle() {
 
 
 }
+//this fuction is invoked on click of edit button
 function editborder() {
     var titlediv = document.getElementById("titlediv");
     var bodydiv = document.getElementById("bodydiv");
@@ -49,6 +49,7 @@ function editborder() {
         }
     }
 }
+//function to save the edited data
 function save() {
     var editTitle = document.getElementById("titlediv").innerText;
     var editBody = document.getElementById("bodydiv").innerText;
@@ -62,6 +63,7 @@ function save() {
     document.getElementById("editicon").innerHTML = '<button class="btn btn-danger btn-md" type="submit" value="Edit" id="edit" onclick="editborder()" >' + "Edit " + '<i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
 
 }
+//function to display number of likes by a person
 function like() {
     likeCount++;
 
@@ -69,6 +71,7 @@ function like() {
 
     document.getElementById("likeCount").innerText = likeCount + " person likes this!"
 }
+//to display all the comments
 function comment() {
     var addeachcomment = '<div class="text-left" id="addeach">' + document.getElementById("commentarea").value + '</div>';
     document.getElementById("addcommentsdiv").innerHTML = addeachcomment + document.getElementById("addcommentsdiv").innerHTML;
