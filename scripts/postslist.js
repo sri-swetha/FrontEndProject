@@ -8,7 +8,3 @@ function removeDiv()
 {
     particularCard.remove();
 }
-function getPost()
-{
-    window.location.href = "../html/post.html";
-}

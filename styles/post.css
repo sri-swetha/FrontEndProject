@@ -1,0 +1,42 @@
+#title{
+    font-weight: bolder;
+    font-size: larger;
+}
+#cardname{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 0px;
+}
+#editicon{
+    float:right;
+}
+#displayCards{
+    display:flex;
+    flex-direction: column;
+    padding:20px 20px 20px 20px;
+}
+#titlediv,#bodydiv {
+    border: thick solid white;
+    cursor: text;
+  }
+  [contenteditable] {
+    outline: 0px solid transparent;
+  }
+  #likeCount,#commentbuttondiv,#allcommentsdiv,#likediv{
+      padding-top:10px;
+  }
+  #commentarea{
+      width:60%;
+  }
+  #addeach{
+    border: thick solid lightgray;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    width:60%;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  #allcommentslabel{
+    font-weight: bolder;
+  }
