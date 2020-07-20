@@ -4,10 +4,161 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="styles/common.css" />
+
+    <link rel="stylesheet" href= 
+    "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+        <link rel="stylesheet" href= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity= 
+    "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+              crossorigin="anonymous"> 
+        <script src= 
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> 
+        </script> 
+        <script src= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> 
+        </script> 
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <div class="container-fluid" id="header">
+        <div class="row">
+            <a id="scribbler">ScriBBler</a>
+            <span id="signposition">
+                <input class="btn btn-primary btn-sm" type="button"  id="submit" data-toggle="modal" data-target="#signupModal"
+                    value="Sign Up">
+                <input class="btn btn-primary btn-sm" type="button" value="Sign In" data-toggle="modal" data-target="#signinModal">                
+            </span>
+            
+        </div>
+        <div class="row">
+            <p id="subheading">Explore,Imagine,Create</p>
+        </div>
+        <div class="row" id="postpositiondiv">
+            <span id="postpositionspan">
+                <input class="btn btn-warning btn-sm" type="button" value="All Posts" onclick="pageRedirect()">
+                <input class="btn btn-warning btn-sm" type="button" value="Create Post" data-toggle="modal" data-target="#createModal">
+            </span>
+        </div>
+        
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signupModal"
+        role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog">
+            
+            <!-- Sign Up Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal"> 
+                        × 
+                    </button>
+                <h4 class="modal-title">Get Started</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="Name" class="label-text">Name</label>
+                        <input type="text" id="Name" placeholder="Enter your name" required>
+                        <label for="Username" class="label-text">Username</label>
+                        <input type="text" id="Username" placeholder="Enter your username" required>                       
+                        <label for="password" class="label-text">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <label for="confirmpassword" class="label-text">Confirm Password</label>
+                        <input type="password" id="confirmpassword" placeholder="Re-enter your password" required>
+                        <button class="btn btn-success btn-md" type="submit" value="Sign up" id="signup" >Sign up</button>
+                    </form>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+
+
+        
+        <!-- Sign In Modal -->
+        <div class="modal" id="signinModal"
+        role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog">
+            
+            <!-- Sign In Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal"> 
+                        × 
+                    </button>
+                <h4 class="modal-title">Welcome Back!</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="Username" class="label-text">Username</label>
+                        <input type="text" id="Username" placeholder="Enter your username" required>                       
+                        <label for="password" class="label-text">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>                       
+                        <button class="btn btn-success btn-md" type="submit" value="Sign In" id="signin" >Sign In</button>
+                        <span id="signupspan">
+                            Not a member? 
+                            <a href="#signupModal" data-toggle="modal" data-dismiss="modal"> 
+                            Sign Up
+                            </a>
+                        </span>
+                    </form>
+
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+               <!-- Create Post Modal -->
+               <div class="modal" id="createModal"
+               role="dialog" aria-labelledby="myModalLabel"
+               aria-hidden="true">
+                   <div class="modal-dialog">
+                   
+                   <!-- Create Modal content-->
+                   <div class="modal-content" id="createmodelcontent">
+                       <div class="modal-header">
+                           <button class="close" data-dismiss="modal"> 
+                               × 
+                           </button>
+                       <h4 class="modal-title">Pen your Post</h4>
+                       </div>
+                       <div class="modal-body">
+                           <form>
+                               <label for="Title" class="label-text">Title</label>
+                               <input type="text" id="Title" placeholder="Enter title of your post" required>                       
+                               <label for="content" class="label-text">Contents</label>
+                               <textarea rows="10" cols="100">Enter the contents of your post</textarea>    
+                               <div class="text-center">                                          
+                               <button class="btn btn-success btn-sm" type="button" value="Create" id="create" >Create</button>
+                            </div>   
+                           </form>
+       
+                       </div>
+                   </div>
+                   
+                   </div>
+               </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/common.js"></script>
+
+    
+
 </body>
 
 </html>
