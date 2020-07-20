@@ -63,3 +63,15 @@ input[type=text], input[type=password],textarea {
 #createmodelcontent{
     width: 100%; 
 }
+html{
+    height:100%;
+}
+.container-fluid{
+    height: 100%;
+    overflow: hidden;
+
+}
+.flex-container{
+    height: 100%;
+    overflow: hidden;
+}
